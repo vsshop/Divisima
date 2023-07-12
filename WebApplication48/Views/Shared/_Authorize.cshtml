@@ -1,0 +1,54 @@
+﻿@model RegistrationModel
+<div class="signup-signin-form" v-bind:class="{active:show}" id="SignInSignUp">
+	<div class="blur-background" v-on:click="Hide()"></div>
+	<div class="sign-form">
+		<article class="half">
+			<h1>Divisima</h1>
+			<div class="tabs">
+				<span class="tab"
+					  v-bind:class="{active:menu == 'signin'}"
+					  v-on:click="ToogleMenu('signin')">
+					<a>Sign in</a>
+				</span>
+				<span class="tab"
+					  v-bind:class="{active:menu == 'signup'}"
+					  v-on:click="ToogleMenu('signup')">
+					<a>Sign up</a>
+				</span>
+			</div>
+			<div class="content">
+				<div v-if="menu == 'signin'" class="cont">
+					<form method="post" asp-controller="Home" asp-action="SignIn">
+						<input asp-for="Login" class="inpt">
+						<label asp-for="Login"></label>
+						<input asp-for="Password" class="inpt">
+						<label asp-for="Password"></label>
+						<label>Or</label>
+						<a class="google-enter" asp-controller="ApiGoogle" asp-action="RedirectToGoogle">
+							<img src="~/img/google.png" />
+							<span>Sign in with Google</span>
+						</a>
+						<div class="submit-wrap">
+							<input type="submit" value="Sign in" class="submit">
+						</div>
+					</form>
+				</div>
+				<div v-else class="cont">
+					<form method="post" asp-controller="Home" asp-action="SignUp">
+						<input asp-for="Login" class="inpt">
+						<label asp-for="Login"></label>
+						<input asp-for="Email" class="inpt">
+						<label asp-for="Email">Your email</label>
+						<input asp-for="Password" class="inpt">
+						<label asp-for="Password">Your password</label>
+						<div class="submit-wrap">
+							<input type="submit" value="Sign up" class="submit">
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</article>
+		<div class="half bg" style="background-position: -39.7667px -27px;"></div>
+	</div>
+</div>

@@ -1,0 +1,360 @@
+﻿.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 0, 10, 0.5);
+    z-index: 1000;
+    pointer-events: none;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.signup-signin-form.active .blur-background {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sign-form {
+    position: fixed;
+    overflow: hidden;
+    width: 700px;
+    height: 500px;
+    background-color: #ffffff;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+    -webkit-box-shadow: rgb(0 0 0 / 10%) 0px 10px 30px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 10px 30px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    pointer-events: none;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.signup-signin-form.active .sign-form {
+    top: 50%;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sign-form .half {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 58px 40px 0;
+}
+
+    .sign-form .half.bg {
+        background-image: url(../img/product/1.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+    }
+
+.sign-form h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 23px;
+    text-align: center;
+    text-indent: 6px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    color: #263238;
+}
+
+.sign-form .tabs {
+    width: 100%;
+    margin-bottom: 29px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+    .sign-form .tabs .tab {
+        display: inline-block;
+        margin-bottom: -1px;
+        padding: 20px 15px 10px;
+        cursor: pointer;
+        letter-spacing: 0;
+        border-bottom: 1px solid #d9d9d9;
+        -moz-user-select: -moz-none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        transition: all 0.1s ease-in-out;
+    }
+
+        .sign-form .tabs .tab a {
+            font-size: 11px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #d9d9d9;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .sign-form .tabs .tab.active a, .sign-form .tabs .tab:hover a {
+            color: #263238;
+        }
+
+        .sign-form .tabs .tab.active {
+            border-bottom: 1px solid #263238;
+        }
+
+.sign-form .content form {
+    position: relative;
+    height: 287px;
+}
+
+.sign-form .content label:first-of-type, .sign-form .content input:first-of-type, .sign-form .content .more:first-of-type {
+    -moz-animation: slideIn 0.4s cubic-bezier(0.37, 0.82, 0.2, 1);
+    -webkit-animation: slideIn 0.4s cubic-bezier(0.37, 0.82, 0.2, 1);
+    animation: slideIn 0.4s cubic-bezier(0.37, 0.82, 0.2, 1);
+}
+
+.sign-form .content label:nth-of-type(2), .sign-form .content input:nth-of-type(2), .sign-form .content .more:nth-of-type(2) {
+    -moz-animation: slideIn 0.5s cubic-bezier(0.37, 0.82, 0.2, 1);
+    -webkit-animation: slideIn 0.5s cubic-bezier(0.37, 0.82, 0.2, 1);
+    animation: slideIn 0.5s cubic-bezier(0.37, 0.82, 0.2, 1);
+}
+
+.sign-form .content label:nth-of-type(3), .sign-form .content input:nth-of-type(3), .sign-form .content .more:nth-of-type(3) {
+    -moz-animation: slideIn 0.6s cubic-bezier(0.37, 0.82, 0.2, 1);
+    -webkit-animation: slideIn 0.6s cubic-bezier(0.37, 0.82, 0.2, 1);
+    animation: slideIn 0.6s cubic-bezier(0.37, 0.82, 0.2, 1);
+}
+
+.sign-form .content label:nth-of-type(3), .sign-form .content a.google-enter, .sign-form .content .more:nth-of-type(3) {
+    -moz-animation: slideIn 0.6s cubic-bezier(0.37, 0.82, 0.2, 1);
+    -webkit-animation: slideIn 0.6s cubic-bezier(0.37, 0.82, 0.2, 1);
+    animation: slideIn 0.8s cubic-bezier(0.37, 0.82, 0.2, 1);
+}
+
+.sign-form .content label {
+    font-size: 12px;
+    color: #263238;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+    .sign-form .content label:not([for='remember']) {
+        display: none;
+    }
+
+.sign-form .content input.inpt {
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin-bottom: 12px;
+    padding: 16px 13px;
+    color: #999999;
+    border: 1px solid #d9d9d9;
+    background: transparent;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+    .sign-form .content input.inpt::-webkit-input-placeholder {
+        font-size: 14px;
+        color: #999999;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .sign-form .content input.inpt:-moz-placeholder {
+        font-size: 14px;
+        color: #999999;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .sign-form .content input.inpt::-moz-placeholder {
+        font-size: 14px;
+        color: #999999;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .sign-form .content input.inpt:-ms-input-placeholder {
+        font-size: 14px;
+        color: #999999;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .sign-form .content input.inpt:focus {
+        border-color: #999999;
+    }
+
+.sign-form .content input.submit {
+    font-size: 12px;
+    line-height: 42px;
+    display: block;
+    width: 100%;
+    height: 42px;
+    cursor: pointer;
+    vertical-align: middle;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #263238;
+    border: 1px solid #263238;
+    background: transparent;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+    .sign-form .content input.submit:hover {
+        background-color: #263238;
+        color: #ffffff;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+.sign-form .content input:focus {
+    outline: none;
+}
+
+.sign-form .content .checkbox {
+    margin-top: 4px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    margin: 17px -1px;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+    .sign-form .content .checkbox + label {
+        vertical-align: middle;
+        display: inline-block;
+        width: 50%;
+    }
+
+        .sign-form .content .checkbox + label:before {
+            content: "\A";
+            color: #999999;
+            font-family: Verdana;
+            font-weight: bold;
+            font-size: 8px;
+            line-height: 10px;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            background: transparent;
+            border: 1px solid #d9d9d9;
+            width: 11px;
+            height: 11px;
+            margin: -2px 8px 0 0;
+        }
+
+    .sign-form .content .checkbox:checked + label:before {
+        content: "✓";
+    }
+
+.sign-form .content .submit-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+    .sign-form .content .submit-wrap a {
+        font-size: 12px;
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #999999;
+    }
+
+        .sign-form .content .submit-wrap a:hover {
+            text-decoration: underline;
+        }
+
+.sign-form .content .signup-cont {
+    display: none;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        margin-left: -320px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        opacity: 0;
+        margin-left: -320px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+.sign-form a.google-enter {
+    height: 42px;
+    background: #7fabd9;
+    position: absolute;
+    margin: 30px 0;
+    left: 0px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .sign-form a.google-enter img {
+        background: #fff;
+        padding: 5px;
+        border-radius: 0 15px 15px 0;
+        height: 46px;
+        border: 2px solid #3569ca;
+        margin: -2px;
+    }
+
+    .sign-form a.google-enter span {
+        text-align: center;
+        font-size: 16px;
+        font-family: inherit;
+        color: #fff;
+        margin: 10px;
+    }
+
+@media (max-width: 576px) {
+    .sign-form {
+        width: 400px;
+    }
+
+        .sign-form .half {
+            width: 100%;
+        }
+
+    .half.bg {
+        display: none;
+        width: 0;
+    }
+}
+
+.sign-form a.google-enter:hover {
+    height: 42px;
+    background: #5783b1;
+    position: absolute;
+    margin: 30px 0;
+    left: 0px;
+    width: 100%;
+}
